@@ -1,0 +1,52 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/category/category",
+    "pages/cars/cars",
+    "pages/user/user"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#AB956C",
+    "navigationBarTitleText": "零食商贩",
+    "navigationBarTextStyle": "light",
+    "backgroundColor": "#000"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "tabBar": {
+    "color": "#D5D1D2",
+    "selectedColor": "#AB956C",
+    "borderStyle": "white",
+    "backgroundColor": "#F7F7F7",
+    "list": [
+      {
+        "selectedIconPath": "images/home-active.png",
+        "iconPath": "images/home.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "images/category-active.png",
+        "iconPath": "images/category.png",
+        "pagePath": "pages/category/category",
+        "text": "分类"
+      },
+      {
+        "selectedIconPath": "images/cars-active.png",
+        "iconPath": "images/cars.png",
+        "pagePath": "pages/cars/cars",
+        "text": "购物车"
+      },
+      {
+        "selectedIconPath": "images/user-active.png",
+        "iconPath": "images/user.png",
+        "pagePath": "pages/user/user",
+        "text": "我的"
+      }
+    ]
+  },
+  "debug": false
+}

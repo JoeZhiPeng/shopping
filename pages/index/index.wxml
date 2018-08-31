@@ -1,0 +1,45 @@
+<!--index.wxml-->
+<!-- <view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+</view> -->
+<view class="page-section page-section-spacing swiper">
+  <swiper indicator-dots="true" autoplay="true" circular="true" interval="2000">
+    <block wx:for="{{banners}}" wx:key="index">
+      <swiper-item>
+        <view class="swiper-item {{item}}">
+          <image src='{{item}}'></image>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+<view class='title'>
+  <text>精选主题</text>
+</view>
+
+<view>
+  <view class='theme-list' bindtap='goCategoryPage'>
+    <image src='../../images/theme01.jpg'></image>
+    <view class='theme-title'>甜品</view>
+  </view>
+  <view class='theme-list'>
+    <image src='../../images/theme02.jpg'></image>
+    <view class='theme-title'>坚果</view>
+  </view>
+  <view class='theme-list'>
+    <image src='../../images/theme03.jpg'></image>
+    <view class='theme-title'>点心</view>
+  </view>
+  <view class='theme-list'>
+    <image src='../../images/theme04.jpg'></image>
+    <view class='theme-title'>糖</view>
+  </view>
+</view>
+

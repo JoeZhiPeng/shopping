@@ -1,0 +1,31 @@
+<!--pages/category/category.wxml-->
+
+<!--主盒子-->
+<view class="category_con">
+  <!--左侧栏-->
+  <view class="nav_left">
+    <scroll-view scroll-y="true" class="scroll_left" scroll-top="{{scrollTop}}">
+      <block wx:for="{{shopTypeList}}" wx:key="{{item.id}}">
+        <view class="nav_left_items {{curNav == item.id ? 'active' : ''}}" data-id="{{item.id}}" data-index="{{index}}" bindtap="switchRightTab">
+          {{item.typeName}}
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+  <!--右侧栏-->
+  <view class="nav_right">
+    <scroll-view scroll-y="true" class="scroll_right">
+      <block wx:for="{{productItem[info]}}" wx:key="{{item.id}}">
+        <view class='nav_right_items' data-id='{{item.id}}'>
+          <image src='{{imagesUrl}}{{item.productImage}}'></image>
+          <view class='pro_name'>
+            {{item.productName}}
+          </view>
+          <view class='price'>
+            ￥{{item.price}}
+          </view>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+</view>
